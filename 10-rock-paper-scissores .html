@@ -5,26 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="10-rock-paper-scissors.css">
+  <link rel="stylesheet" href="12-rock-paper-scissors .css">
 </head>
 
 <body>
 
   <p class="title">Rock Paper Scissors</p>
 
-  <button onclick="
-    playGame('Rock');"
-    class="move-button">
+  <button 
+    class="move-button js-rock-button"> 
   <img src="images/rock.png" alt="rock" class="move-icon" >
   </button>
 
-   <button onclick="
-    playGame('Paper');
-    "  class="move-button"><img src="images/paper.png" alt="paper" class="move-icon"></button>
+   <button class="move-button js-paper-button"><img src="images/paper.png" alt="paper" class="move-icon"></button>
 
     <button onclick="
       playGame('Scissors');
-    " class="move-button"><img src="images/scissors.png" alt="scissors" class="move-icon"></button>
+    " class="move-button js-scissors-button"><img src="images/scissors.png" alt="scissors" class="move-icon"></button>
 
       <p class="js-result result"></p>
 
@@ -45,7 +42,11 @@
       Reset Score
     </button>
 
-  <script src="10-rock-paper-scissors.js"></script>
+    <button class="auto-play-btn" onclick="
+    autoPlay();
+    ">Auto Play</button>
+
+  <script src="12-rock-paper-scissors .js"></script>
 
 </body>
 </html>
