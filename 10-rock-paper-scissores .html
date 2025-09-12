@@ -30,23 +30,26 @@
 
       <p class="js-score score" ></p>
 
-    <button onclick="
-    score.wins=0;
-    score.losses=0;
-    score.ties=0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-    "
-    class="reset-score-button"
+    <button 
+    class="reset-score-button reset-js-button"
     >
       Reset Score
     </button>
 
-    <button class="auto-play-btn" onclick="
-    autoPlay();
-    ">Auto Play</button>
+        <div id="confirm-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+    background:rgb(14, 14, 14); border:1px solid black; padding:20px; z-index:1000;">
+      <p>Are you sure you want to reset the score?</p>
+      <button id="yes-btn">Yes</button>
+      <button id="no-btn">No</button>
+    </div>
+    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+    background:rgba(0,0,0,0.5); z-index:999;"></div>
+
+    <button class="auto-play-btn auto-js-btn" >Auto Play</button>
 
   <script src="12-rock-paper-scissors .js"></script>
+
+
 
 </body>
 </html>
